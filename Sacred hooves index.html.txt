@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sacred Hooves – Cow Protection</title>
+
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4fff0;
+  line-height:1.6;
+}
+header{
+  background:#2e7d32;
+  color:white;
+  text-align:center;
+  padding:25px 10px;
+}
+header h1{
+  margin:0;
+  font-size:2.2rem;
+}
+nav{
+  background:#1b5e20;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:10px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+nav a{
+  color:white;
+  margin:6px 10px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:0.95rem;
+}
+nav a:hover{
+  text-decoration:underline;
+}
+section{
+  padding:40px 15px;
+  max-width:1100px;
+  margin:auto;
+}
+h2, h3{
+  color:#2e7d32;
+}
+img{
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+  margin-top:15px;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+button{
+  background:#2e7d32;
+  color:white;
+  padding:12px 22px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:1rem;
+}
+button:hover{
+  background:#1b5e20;
+}
+input, textarea{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:1rem;
+}
+footer{
+  background:#2e7d32;
+  color:white;
+  text-align:center;
+  padding:12px;
+  font-size:0.9rem;
+}
+
+
+/* WhatsApp Floating Button */
+.whatsapp-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  border-radius:50px;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  z-index:2000;
+}
+.whatsapp-btn img{
+  width:28px;
+  margin-right:10px;
+}
+.whatsapp-btn:hover{
+  background:#1ebe5d;
+}
+
+
+@media (max-width:600px){
+  header h1{
+    font-size:1.7rem;
+  }
+  nav a{
+    font-size:0.85rem;
+    margin:5px;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+  <h1>SACRED HOOVES</h1>
+  <p>Protect Cows • Protect Nature • Protect Life</p>
+</header>
+
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#importance">Importance</a>
+  <a href="#products">Cow Products</a>
+  <a href="#rescue">Rescue</a>
+  <a href="#volunteer">Volunteer</a>
+  <a href="#donate">Donate</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+
+<section id="home">
+  <h2>Our Mission</h2>
+  <p>
+    Sacred Hooves is dedicated to the rescue, protection, and welfare of cows.
+    We provide shelter, medical care, and promote awareness about cow protection.
+  </p>
+  <img src="https://images.unsplash.com/photo-1590502593747-42a996133562" alt="Indian Cow">
+</section>
+
+
+<section id="about">
+  <h2>About Sacred Hooves</h2>
+  <p>
+    Sacred Hooves is a cow protection initiative based in Bangalore.
+    We work to rescue abandoned and injured cows and promote sustainable living.
+  </p>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <img src="https://images.unsplash.com/photo-1609252509102-a7f28f5c1b35">
+  </div>
+</section>
+
+
+<section id="importance">
+  <h2>Importance of Cow</h2>
+  <p>
+    The cow plays a vital role in Indian culture, agriculture, and the environment.
+    Cows support sustainable farming, rural economy, and ecological balance.
+  </p>
+</section>
+
+
+<section id="products">
+  <h2>Importance of Cow Products</h2>
+  <h3>Milk & Ghee</h3>
+  <p>Nutritious, immunity-boosting, and essential for food and health.</p>
+  <h3>Cow Dung</h3>
+  <p>Used as organic manure, biogas, and eco-friendly products.</p>
+  <h3>Cow Urine (Gomutra)</h3>
+  <p>Used in traditional medicine and organic farming.</p>
+  <h3>Marketing & Distribution</h3>
+  <p>
+    Sacred Hooves markets cow products ethically and delivers them to
+    orphanages, old-age homes, poor families, and farmers.
+  </p>
+</section>
+
+
+<section id="rescue">
+  <h2>Emergency Cow Rescue</h2>
+  <p>Share your live GPS location for immediate rescue.</p>
+  <img src="https://images.unsplash.com/photo-1546443046-ed1ce6ffd1ab">
+  <br><br>
+  <button onclick="getLocation()">Share Emergency Location</button>
+  <p id="location"></p>
+</section>
+
+
+<section id="volunteer">
+  <h2>Volunteer With Us</h2>
+  <img src="https://images.unsplash.com/photo-1603187083444-94c9f3dbd0c5">
+  <form action="mailto:manushreeg27@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="text" name="Phone" placeholder="Phone Number" required>
+    <textarea name="Address" placeholder="Address"></textarea>
+    <textarea name="Service" placeholder="How can you help?"></textarea>
+    <button type="submit">Apply as Volunteer</button>
+  </form>
+</section>
+
+
+<section id="donate">
+  <h2>Donate to Sacred Hooves</h2>
+  <p>Your donation helps rescue, feed, and shelter cows.</p>
+  <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+  <p><b>UPI ID:</b> sacredhooves@upi</p>
+  <p>Google Pay • PhonePe • Paytm • Bank Transfer</p>
+</section>
+
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><b>Address:</b> Pattanagere, R R Nagar, Bangalore</p>
+  <p><b>Phone:</b> 7899574243</p>
+  <p><b>Email:</b> manushreeg27@gmail.com</p>
+</section>
+
+
+<footer>
+  © 2026 Sacred Hooves | Cow Protection Initiative
+</footer>
+
+
+<!-- WhatsApp Button -->
+<a class="whatsapp-btn"
+   href="https://wa.me/917899574243?text=Hello%20Sacred%20Hooves,%20I%20need%20help%20regarding%20cow%20rescue."
+   target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  WhatsApp Us
+</a>
+
+
+<script>
+function getLocation(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }else{
+    alert("GPS not supported");
+  }
+}
+function showPosition(position){
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  document.getElementById("location").innerHTML =
+    "Latitude: " + lat + "<br>Longitude: " + lon +
+    `<br><a href="https://www.google.com/maps?q=${lat},${lon}" target="_blank">
+    Open in Google Maps</a>`;
+}
+</script>
+
+
+</body>
+</html>
